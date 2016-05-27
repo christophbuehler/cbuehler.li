@@ -1,0 +1,119 @@
+/*
+Theme Name: cbuehler
+Theme URL: http://norizon.li
+Description: The theme of cbuehler.li
+Author: christoph buehler
+Author URL: http://cbuehler.li
+Version: 1.0
+Tags: dark
+
+License:
+License URL:
+*/
+
+* {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* IE/Edge */
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* content */
+.minimax_content_area { margin-bottom: 12px; display: flex; flex-wrap: wrap; table-layout: fixed; }
+.gridt { padding-bottom: 16px; display: inline-block; vertical-align: top; flex-grow: 1; }
+.wrapper img { display: block; height: auto; width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body { background: url('pattern.png') #ffff00; margin: 0; padding: 0; font-family: 'Source Code Pro', sans-serif;
+  -webkit-transition: background-color .5s ease-in-out;
+  -o-transition: background-color .5s ease-in-out;
+  transition: background-color .5s ease-in-out; }
+
+.dark { background-color: #10181f; overflow: hidden;
+  /*-webkit-transition: background-color .2s ease .2s;
+  -o-transition: background-color .2s ease .2s;
+  transition: background-color .2s ease .2s;*/
+}
+
+h1 { margin: 48px 0 28px; padding: 0; text-align: left; letter-spacing: 8px; font-weight: 600; color: #FFFF00; }
+h2 { font-size: 14px; margin: 12px 0; color: #FFFF00; font-weight: 400; }
+
+.clear { clear: both; }
+
+#project-nav { display: none; padding: 16px; margin: 0 0 16px; text-align: center; }
+#project-nav > li { margin: 0 16px; list-style: none; display: inline-block; }
+#project-nav > li > a { color: #fff; text-decoration: none; line-height: 28px; font-size: 12px; letter-spacing: 4px; }
+#project-nav > li > a:before { background: #fff; }
+
+.profile header { padding-top: 96px; height: 172px; margin: 8px 0; }
+#sections > section, .profile {
+  -webkit-transition: transform .8s ease, opacity .5s ease-in;
+  -o-transition: transform .8s ease, opacity .5s ease-in;
+  transition: transform .8s ease, opacity .5s ease-in;
+}
+
+.dark .profile, #sections > section { opacity: 0;
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.dark #projects .visible {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+
+#logo { width: 32px; }
+#logo-container { padding-bottom: 48px; text-align: center; line-height: 28px; letter-spacing: 16px; }
+#logo-font { font-size: 12px; opacity: 0;
+  -webkit-transition: font-size .8s ease, opacity .6s ease .2s;
+  -o-transition: font-size .8s ease, opacity .6s ease .2s;
+  transition: font-size .8s ease, opacity .6s ease .2s; }
+#logo-font.visible { font-size: 18px; opacity: 1; }
+#projects-link, #profile-link { font-size: 12px; letter-spacing: 4px; line-height: 28px; float: left; }
+#profile-link { float: right; }
+.nav-link.active:before, .nav-link:hover:before { width: 100%; }
+.profile { font-size: 28px; line-height: 38px; letter-spacing: 4px; position: absolute; width: 100%; }
+.content a { color: #26a69a; text-decoration: none; }
+.nav-link { display: inline-block; color: #000; font-weight: 900; text-decoration: none; cursor: pointer; position: relative; }
+.nav-link:before { content: " "; position: absolute; left: 0; top: 12px; height: 3px; background: #111; width: 0;
+  -webkit-transition: width .2s ease;
+  -o-transition: width .2s ease;
+  transition: width .2s ease; }
+
+.content-wrapper, .wrapper { margin: 0 auto; width: 786px; max-width: 100%; padding: 0 32px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+.content-wrapper { padding-bottom: 32px; min-height: 100%; }
+
+iframe { border: none; margin: 0 auto; display: block; }
+
+.dark #projects { display: block; display: block; opacity: 1; overflow: auto; height: 100vh; }
+#projects { display: none; overflow: hidden; position: fixed; }
+
+.wrapper { line-height: 24px; font-size: 12px; letter-spacing: 4px; text-align: left; padding-bottom: 32px; margin: 0 auto; }
+
+#projects, #sections > section { min-height: 100%; width: 100%; }
+#sections > section { color: #fff; display: none; opacity: 0; text-align: center; overflow: auto; }
+#sections > section.block { display: block; }
+
+.project-footer { display: none; z-index: 1; text-align: center; height: 68px; padding: 32px 0; width: 100%; color: #000; position: relative; overflow: hidden; }
+#close-link span { font-size: 12px; letter-spacing: 4px; color: #fff; text-decoration: none; position: relative; z-index: 1; line-height: 28px; display: inline-block; vertical-align: top; }
+#close-link span::before { background: #fff; }
+.back-btn { line-height: 28px; }
+
+@media all and (max-width: 800px) {
+  .profile header { padding-top: 48px; }
+  .project-footer { padding: 16px 0; }
+  .project-footer .prev { line-height: 50px; }
+}

@@ -1,0 +1,9 @@
+{
+  "uploadOnSave": true,
+  "hostname": "server46.cyon.ch",
+  "port": "21",
+  "target": "/public_html/online/cbuehler/wp-content/themes/cbuehler",
+  "username": "norizonf",
+  "password": "|77sd|sdfg43|ad345|atg54w32t32|",
+  "transport": "ftp"
+}
