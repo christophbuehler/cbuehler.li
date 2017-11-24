@@ -11,23 +11,27 @@ window.onload = function() {
             setTimeout(function() {
                 post.classList.add('show');
             }, index * 100 + 800);
-            post.addEventListener('touchstart', function(ev) {
+            post.addEventListener('touchstart', postTouch);
+            post.addEventListener('mousedown', postTouch);
+            function postTouch(ev) {
                 if (activeEl) return;
                 document.body.classList.add('detail');
                 this.classList.add('active');
                 activeEl = this;
                 ev.stopPropagation();
                 ev.preventDefault();
-            });
+            }
         })(i);
     }
     setTimeout(function() {
         document.querySelector('footer').classList.add('show');
     }, 1200);
-    document.body.addEventListener('touchstart', function() {
+    document.body.addEventListener('touchstart', bodyTouch);
+    document.body.addEventListener('mousedown', bodyTouch);
+    function bodyTouch() {
         if (!activeEl) return;
         this.classList.remove('detail');
         activeEl.classList.remove('active');
         activeEl = undefined;
-    });
+    }
 };
