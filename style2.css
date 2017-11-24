@@ -1,0 +1,58 @@
+* {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* IE/Edge */
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body { overflow: hidden; margin: 0; padding: 0; font-family: 'Source Code Pro', sans-serif; }
+#logo { height: 48px; }
+header { text-align: center; padding: 48px 0; }
+
+section.intro { opacity: 0; transition: opacity .8s ease; margin: 0 auto; font-size: 16pt; line-height: 38px; letter-spacing: 4px; max-width: 740px; padding: 32px; }
+section.intro.show { opacity: 1; }
+section.intro div { padding: 0 32px; }
+section.posts { padding-top: 32px; text-align: center; max-width: 1200px; margin: 0 auto; }
+section.posts .post { opacity: 0; z-index: 0; position: relative; box-sizing: border-box; transition: padding .2s ease, opacity .4s ease; overflow: hidden; display: inline-block; margin-left: 4px; text-align: center; width: 20vw; height: 20vw; }
+section.posts .post.show { opacity: 1; }
+section.posts .post .border { box-sizing: border-box; border: 1px solid rgba(0, 0, 0, 1); width: 100%; height: 100%; }
+
+section.posts .post:nth-of-type(1) .shape, section.posts .post:nth-of-type(1) .border { border-color: #311B92; }
+section.posts .post:nth-of-type(1) .content h1 { color: #311B92; }
+
+section.posts .post:nth-of-type(2) .shape, section.posts .post:nth-of-type(2) .border { border-color: #006064; }
+section.posts .post:nth-of-type(2) .content h1 { color: #006064; }
+
+section.posts .post:nth-of-type(3) .shape, section.posts .post:nth-of-type(3) .border { border-color: #FF6F00; }
+section.posts .post:nth-of-type(3) .content h1 { color: #FF6F00; }
+
+section.posts .post:nth-of-type(4) .shape, section.posts .post:nth-of-type(4) .border { border-color: #01579B; }
+section.posts .post:nth-of-type(4) .content h1 { color: #01579B; }
+
+section.posts .post .shape { transition: all .8s ease-out; position: absolute; border: 2px solid rgba(0, 0, 0, 1); }
+section.posts .post .shape1 { left: -15vw; top: -10vw; height: 40vw; width: 40vw; border-radius: 50%; }
+section.posts .post .shape2 { left: 40vw; top: -60vw; height: 60vw; width: 15vw; }
+section.posts .post .shape3 { left: 20vw; top: -40vw; height: 15vw; width: 62vw; }
+section.posts .post .shape4 { left: -90vw; top: 24vw; height: 4vw; width: 80vw; }
+section.posts .post .shape5 { left: 11vw; top: 21vw; height: 80vw; width: 84vw; }
+section.posts .post .shape6 { left: -6vw; top: -8vw; height: 24vw; width: 38vw; }
+section.posts .post .shape7 { left: -8vw; top: -56vw; height: 6vw; width: 42vw; }
+section.posts .post .shape8 { left: -60vw; top: 20vw; transform: rotate(40deg); height: 0; width: 150vw; border-top: none; }
+section.posts .post .shapes { position: absolute; left: 0; top: 0; width: 100%; height: 100%; transform: scale(.6); transition: transform .8s ease-out; }
+section.posts .post.active { z-index: 1; overflow: visible; padding: 16px; }
+section.posts .post.active .shapes { transform: scale(1); }
+section.posts .post.active .border { border-width: 2px; }
+section.posts .post .content { opacity: 0; visibility: hidden; transform: scale(.8); padding: 16px; transition: all .8s ease-out; position: fixed; left: 0; top: 0; width: 100vw; height: 100vh; box-sizing: border-box; }
+section.posts .post .content .inner { text-align: left; transition: all .8s ease-out; color: #fff; width: 100%; height: 100%; box-sizing: border-box; padding: 32px; }
+section.posts .post .content h1 { letter-spacing: 4px; }
+section.posts .post .content p { letter-spacing: 2px; line-height: 28px; }
+section.posts .post.active .content { visibility: visible; opacity: 1; transform: scale(1); }
+section.posts .post.active .content .inner { background: rgba(0, 0, 0, 1); }
+section.posts img { width: 100%; }
+footer { opacity: 0; transition: opacity .8s ease; text-align: center; padding: 32px; }
+footer.show { opacity: 1; }
+footer a { position: relative; display: inline-block; color: rgba(0, 0, 0, .6); font-size: 12pt; text-decoration: none; letter-spacing: 4px; }
+footer a:after { content: ' '; line-height: 32px; position: absolute; left: 0; bottom: 7px; width: 100%; height: 1px; background: #000; }

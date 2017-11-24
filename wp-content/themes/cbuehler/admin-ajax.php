@@ -1,3 +1,0 @@
-<?php
-retrun 'tset';
-?>
