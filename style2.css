@@ -16,9 +16,10 @@ section.intro { opacity: 0; transition: opacity .8s ease; margin: 0 auto; font-s
 section.intro.show { opacity: 1; }
 section.intro div { padding: 0 32px; }
 section.posts { padding-top: 32px; text-align: center; max-width: 1200px; margin: 0 auto; }
-section.posts .post { opacity: 0; z-index: 0; position: relative; box-sizing: border-box; transition: padding .2s ease, opacity .4s ease; overflow: hidden; display: inline-block; margin-left: 4px; text-align: center; width: 20vw; height: 20vw; }
+section.posts .post { opacity: 0; position: relative; box-sizing: border-box; transition: padding .2s ease, opacity .4s ease; overflow: hidden; display: inline-block; margin-left: 4px; text-align: center; width: 20vw; height: 20vw; }
 section.posts .post.show { opacity: 1; }
-section.posts .post .border { box-sizing: border-box; border: 1px solid rgba(0, 0, 0, 1); width: 100%; height: 100%; }
+section.posts .post .border { z-index: 1; position: relative; box-sizing: border-box; border: 1px solid rgba(0, 0, 0, 1); width: 100%; height: 100%; }
+body.detail section.posts .post .border { z-index: 0; }
 
 section.posts .post:nth-of-type(1) .shape, section.posts .post:nth-of-type(1) .border { border-color: #311B92; }
 section.posts .post:nth-of-type(1) .content h1 { color: #311B92; }
@@ -55,4 +56,4 @@ section.posts img { width: 100%; }
 footer { opacity: 0; transition: opacity .8s ease; text-align: center; padding: 32px; }
 footer.show { opacity: 1; }
 footer a { position: relative; display: inline-block; color: rgba(0, 0, 0, .6); font-size: 12pt; text-decoration: none; letter-spacing: 4px; }
-footer a:after { content: ' '; line-height: 32px; position: absolute; left: 0; bottom: 7px; width: 100%; height: 1px; background: #000; }
+footer a:after { content: ' '; line-height: 32px; position: absolute; left: 0; bottom: 7px; width: 100%; height: 2px; background: #000; }
